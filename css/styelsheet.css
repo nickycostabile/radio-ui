@@ -1,0 +1,12 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+.ui-mobile .ui-content {
+	width: 80%;
+    max-width: 768px; /* tablet landscape width */
+    margin: 0 auto;
+    overflow: hidden;
+}

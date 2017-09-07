@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="radioDev" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Radio UI Dev V1</title>
+
+	<!-- Style Links -->
+	<link rel="stylesheet" href="css/themes/theme.min.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+
+	<link rel="stylesheet" href="css/styelsheet.css" />
+
+</head>
+<body>
+	<div data-role="page" data-theme="a" id="page">
+		<div data-role="header" data-position="inline">
+			<h1>radio ui dev v1</h1>
+		</div>
+		<div ng-view data-role="content" data-theme="a" ng-controller="GetParametersController">
+
+		
+			<button id="getParametersBtn">Get Parameters</button>
+			<button id="setParametersBtn">Set Parameters</button>
+
+	    		<p id="frequencyParam"></p>
+
+	    		<label for="frequency">Frequency:</label>
+			    	<input type="number" ng-model="param.frequency" id="frequency" value="">
+
+			    <label for="bandwidth">Bandwidth:</label>
+					<input type="number" ng-model="param.bandwidth" id="bandwidth" value="">
+
+				<label for="gain">Gain:</label>
+					 <input type="number" ng-model="param.gain" id="gain" value=""> 
+
+				<input type="button" ng-click="reset()" value="Reset" />
+    			<input type="submit" ng-click="update(param)" value="Save" />
+
+				<hr>
+
+				<pre>parameters = {{param | json}}</pre>
+  				<pre>last saved parameters = {{lastParam | json}}</pre>
+
+
+
+		</div>
+
+	</div>
+	
+	<!-- Script Links -->
+	<script src="lib/angular.min.js"></script>
+	<!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+	<script src="controllers/GetParametersController.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<script src="js/app.js"></script>
+	
+</body>
+</html>
