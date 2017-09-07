@@ -1,3 +1,3 @@
 # radio-ui
 
-# search url example: ../radio-ui/index.html?frequency=04&bandwidth=22&gain=1992
+# search url example: ../radio-ui/index.html?frequency=10&bandwidth=20&gain=30
