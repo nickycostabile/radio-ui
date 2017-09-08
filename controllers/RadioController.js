@@ -1,8 +1,16 @@
 'use strict';
 
-angular
-  .module('radioApp', [])
-  .controller('RadioController', ['$scope', function($scope) {
+var radioApp = angular.module('radioApp', []);
+
+var radioController = radioApp.controller('radioController', function($scope, $window) {
+    
+  $scope.testClick = function () {
+    $window.alert("Hi there");
+  };
+
+
+
+
 
     // Save and Reset Parameters 
     $scope.lastParam = {};
@@ -18,6 +26,4 @@ angular
     $scope.reset();
 
 
-  }]); // end RadioController
-
-
+}); // end radioController

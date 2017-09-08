@@ -17,9 +17,11 @@
 		<div data-role="header" data-position="inline">
 			<h1>radio ui dev v1</h1>
 		</div>
-		<div ng-view data-role="content" data-theme="a" ng-controller="RadioController">
 
+	<div ng-view data-role="content" data-theme="a"> <!-- View -->
+		<div ng-controller="radioController">
 
+			<!--<button ng-click="testClick()">test</button>-->
 			<button id="getParametersBtn">Get Parameters</button>
 			<button id="setParametersBtn">Set Parameters</button>
 
@@ -37,14 +39,12 @@
 				<input type="button" ng-click="reset()" value="Reset" />
     			<input type="submit" ng-click="update(param)" value="Save" />
 
-				<hr>
+			<hr>
 
-				<pre>parameters = {{param | json}}</pre>
-  				<pre>last saved parameters = {{lastParam | json}}</pre>
-
-
-
+			<pre>parameters = {{param | json}}</pre>
+  			<pre>last saved parameters = {{lastParam | json}}</pre>
 		</div>
+	</div>
 
 	</div>
 	
@@ -52,7 +52,7 @@
 	<script src="lib/angular.min.js"></script>
 	<!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
-	<script src="controllers/RadioController.js"></script>
+	<script src="controllers/radioController.js"></script>
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
