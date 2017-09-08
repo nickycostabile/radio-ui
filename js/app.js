@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 	// Get Parameters
 	var getParametersBtn = document.getElementById('getParametersBtn');
 	var url = location.href;
@@ -18,6 +17,7 @@ $(document).ready(function() {
 
 
 		console.log('frequency: ' + frequency + ', bandwidth: ' + bandwidth + ', gain: ' + gain);
+		
 
 	}); // end event listen on getParametersBtn
 
@@ -61,8 +61,6 @@ $(document).ready(function() {
 	document.getElementById("bandwidth").placeholder = getParameter(url, 'bandwidth');
 	document.getElementById("gain").placeholder = getParameter(url, 'gain');
 	
-
-
 		
 		// All calls to .val(value) update if angular elemnt is present 
 		(function($, ng) {
